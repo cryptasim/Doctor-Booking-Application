@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-[#ADADAD] bg-white rounded-xl shadow-md px-4 md:px-8 sticky top-0 z-30 transition-all'>
-      <img onClick={() => navigate('/')} className='w-44 cursor-pointer' src={assets.new_logo} alt="" />
+      <img onClick={() => {navigate('/'); window.scrollTo(0, 0);}} className='w-44 cursor-pointer' src={assets.new_logo} alt="" />
       <ul className='md:flex items-start gap-5 font-semibold hidden'>
         <NavLink to='/' className={({ isActive }) => isActive ? 'text-primary' : 'hover:text-primary transition-colors'}>
           <li className='py-1 px-2 rounded-lg transition-all'>HOME</li>
