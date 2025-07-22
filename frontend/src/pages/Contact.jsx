@@ -1,7 +1,10 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { useNavigate } from 'react-router-dom';
+
 
 const Contact = () => {
+   const navigate = useNavigate();
   return (
     <div className="bg-[#f7fafc] rounded-2xl shadow-lg md:mx-10 px-4 sm:px-8 py-10 mt-10 mb-20">
       <div className='text-center text-3xl pt-6 text-primary font-bold tracking-wide mb-8'>
@@ -13,8 +16,8 @@ const Contact = () => {
         <div className='flex flex-col justify-center items-start gap-6 w-full max-w-md'>
           <p className='font-bold text-lg text-primary'>OUR OFFICE</p>
           <p className='text-gray-600'>Salt Lake, Kolkata <br /> <span className='text-gray-400'>West Bengal, India</span></p>
-          <p className='text-gray-600'>Tel: <span className='font-semibold'>+91 12345 67890</span> <br /> Email: <span className='font-semibold'>doctorappointment@gmail.com</span></p>
-          <p className='font-bold text-lg text-primary mt-4'>CAREERS AT PRESCRIPTO</p>
+          <p className='text-gray-600'>Tel: <span className='font-semibold'>+91 12345 67890</span> <br /> Email: <span className='font-semibold'>customercare@novamed.com</span></p>
+          <p className="font-bold text-lg text-primary mt-4 flex items-center gap-2">CAREERS AT<img onClick={() => {navigate('/'); window.scrollTo(0, 0);}} src={assets.new_logo} alt="Company Logo" className="h-8" /></p>
           <p className='text-gray-600'>Learn more about our teams and job openings.</p>
           <button className='border 
           border-[#1a202c] bg-white  shadow transition-all duration-300 hover:bg-[#1a202c] hover:text-white px-8 py-3 rounded-full text-base font-semibold cursor-pointer '>
